@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant User
+    participant SPA
+    participant API
+
+    User->>SPA: Creates new note
+    SPA->>API: Sends POST request with new note data
+    API-->>SPA: Returns success status
+    SPA->>User: Displays success message

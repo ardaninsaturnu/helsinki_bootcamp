@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant User
+    participant SPA
+    participant API
+
+    User->>SPA: Navigates to https://studies.cs.helsinki.fi/exampleapp/spa
+    SPA->>API: Sends AJAX request for data
+    API-->>SPA: Returns data
+    SPA->>User: Displays data
+    User->>SPA: Interacts with Notes SPA

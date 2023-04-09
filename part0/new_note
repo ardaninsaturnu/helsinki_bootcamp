@@ -1,0 +1,12 @@
+sequenceDiagram
+participant User
+participant Form
+participant Server
+
+User->>Form: Submit
+Form->>Server: POST /new_note
+Server-->>Form: Note saved
+Server-->>User: Redirect to /notes (302)
+User->>Server: GET /notes
+Server->>User: Return note list
+
