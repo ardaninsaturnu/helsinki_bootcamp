@@ -11,9 +11,8 @@ const App = () => {
     return <h1>{ props.title }</h1>
   }
   
-  return (
-    <div>
-      <Header title={course}/>
+  const Content = () => (
+    <>
       <p>
         {part1} {exercises1}
       </p>
@@ -23,9 +22,18 @@ const App = () => {
       <p>
         {part3} {exercises3}
       </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </>
+  );
+  
+  const Total = () => <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+  
+  return (
+    <div>
+      <Header title={course}/>
+      <Content/>
+      <Total/>
     </div>
   )
 }
 
-export default App
+export default App;
